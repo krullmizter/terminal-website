@@ -1,0 +1,31 @@
+body {
+    box-sizing: border-box;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #00FF66;
+    text-shadow: 0 0 10px #282828, 0 0 20px #00FF66;
+}
+
+.computer {
+    border: 50px solid #383838;
+    min-height: 100vh;
+}
+
+.border {
+    border: 50px solid #303030;
+    border-radius: 7.5px;
+    min-height: 100vh;
+}
+
+.terminal {
+    margin: 10px;
+}
+
+#inner-terminal {
+    padding: 10% 20%;
+    min-height: 100vh;
+    background: radial-gradient(#444444, #282828);
+    font-family: courier, monospace;
+    font-size: 22px;
+}

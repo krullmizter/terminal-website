@@ -5,7 +5,7 @@ var text = 'Welcome to me, I\'m Samuel Granvik, a student of BE in information t
 window.onload = function autoType() {
 
     if (i < text.length) {
-        document.getElementById('inner-terminal').innerHTML += text.charAt(i);
+        document.getElementById('terminal').innerHTML += text.charAt(i);
         i++;
         setTimeout(autoType, speed);
     }

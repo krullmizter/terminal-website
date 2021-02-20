@@ -5,11 +5,11 @@
 #panel {
     position: relative;
     min-height: 100vh;
-    border: 2.5em solid transparent;
+    border: 3em solid transparent;
     border-image-outset: 0;
     border-image-slice: 100%;
     border-image-source: none;
-    border-image-source: url(img/bezel.png);
+    border-image-source: url(assets/img/bezel.png);
     border-image-slice: 30 fill;
 }
 

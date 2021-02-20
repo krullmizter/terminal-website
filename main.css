@@ -30,11 +30,11 @@ a {
 #panel {
   position: relative;
   min-height: 100vh;
-  border: 2.5em solid transparent;
+  border: 3em solid transparent;
   border-image-outset: 0;
   border-image-slice: 100%;
   border-image-source: none;
-  border-image-source: url(img/bezel.png);
+  border-image-source: url(assets/img/bezel.png);
   border-image-slice: 30 fill;
 }
 
@@ -128,114 +128,78 @@ a {
 }
 
 .text {
-  -webkit-animation: textFlicker linear 10s infinite;
-          animation: textFlicker linear 10s infinite;
+  -webkit-animation: textFlicker 10s infinite;
+          animation: textFlicker 10s infinite;
 }
 
-.blackLine {
+.whiteLine {
   width: 100%;
-  height: 2.5px;
-  position: absolute;
+  height: 2.5em;
   opacity: .3;
-  z-index: 3;
-  background-color: #000;
-  -webkit-animation: blackLine 7.5s ease-out infinite;
-          animation: blackLine 7.5s ease-out infinite;
+  position: absolute;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(71, 71, 71, 0.25)), to(rgba(158, 158, 158, 0.25)));
+  background: linear-gradient(0deg, rgba(71, 71, 71, 0.25) 0%, rgba(158, 158, 158, 0.25) 100%);
+  -webkit-animation: whiteLine linear 5s infinite;
+          animation: whiteLine linear 5s infinite;
 }
 
-@-webkit-keyframes blackLine {
+@-webkit-keyframes whiteLine {
   0% {
-    bottom: 0%;
+    bottom: 100%;
   }
-  75% {
-    bottom: 0%;
+  80% {
+    bottom: 100%;
   }
   100% {
-    bottom: 100%;
+    bottom: 0%;
   }
 }
 
-@keyframes blackLine {
+@keyframes whiteLine {
   0% {
-    bottom: 0%;
+    bottom: 100%;
   }
-  75% {
-    bottom: 0%;
+  80% {
+    bottom: 100%;
   }
   100% {
-    bottom: 100%;
+    bottom: 0%;
   }
 }
 
 @-webkit-keyframes textFlicker {
-  5% {
-    opacity: .5;
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-    -webkit-transform: skewX(35deg);
-            transform: skewX(35deg);
+  0% {
+    text-shadow: none;
   }
-  6% {
-    opacity: .2;
-    -webkit-transform: translateX(-12px);
-            transform: translateX(-12px);
-    -webkit-transform: skewX(-10deg);
-            transform: skewX(-10deg);
+  65% {
+    text-shadow: none;
   }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transform: skew(0);
-            transform: skew(0);
+  96% {
+    text-shadow: 1.5px 1px 1.5px #00b347;
   }
-  75% {
-    opacity: .75;
+  98% {
+    text-shadow: 1.75px 1.5px 1.5px #00b347;
   }
-  77% {
-    opacity: 1;
-  }
-  97% {
-    opacity: .75;
-  }
-  99% {
-    opacity: 1;
+  100% {
+    text-shadow: 1px 1.25px 1.5px #00b347;
   }
 }
 
 @keyframes textFlicker {
-  5% {
-    opacity: .5;
-    -webkit-transform: translateX(10px);
-            transform: translateX(10px);
-    -webkit-transform: skewX(35deg);
-            transform: skewX(35deg);
+  0% {
+    text-shadow: none;
   }
-  6% {
-    opacity: .2;
-    -webkit-transform: translateX(-12px);
-            transform: translateX(-12px);
-    -webkit-transform: skewX(-10deg);
-            transform: skewX(-10deg);
+  65% {
+    text-shadow: none;
   }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    -webkit-transform: skew(0);
-            transform: skew(0);
+  96% {
+    text-shadow: 1.5px 1px 1.5px #00b347;
   }
-  75% {
-    opacity: .75;
+  98% {
+    text-shadow: 1.75px 1.5px 1.5px #00b347;
   }
-  77% {
-    opacity: 1;
-  }
-  97% {
-    opacity: .75;
-  }
-  99% {
-    opacity: 1;
+  100% {
+    text-shadow: 1px 1.25px 1.5px #00b347;
   }
 }
 

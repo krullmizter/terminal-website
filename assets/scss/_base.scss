@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+$black: #000;
+$green: #00FF66;
+
+::selection {
+    background-color: $green;
+}
+
+a {
+    color: $green;
+    transition: .2s;
+}
+
+@mixin flickerPseudo() {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    pointer-events: none;
+}

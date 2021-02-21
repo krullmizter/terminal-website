@@ -5,12 +5,12 @@
 #panel {
     position: relative;
     min-height: 100vh;
-    border: 3em solid transparent;
+    border: 4em solid transparent;
     border-image-outset: 0;
     border-image-slice: 100%;
     border-image-source: none;
     border-image-source: url(assets/img/bezel.png);
-    border-image-slice: 30 fill;
+    border-image-slice: 35 fill;
 }
 
 #screen {
@@ -19,7 +19,7 @@
     position: absolute;
     background-image: radial-gradient(rgba(0, 100, 10, 1), $black 100%);
 
-    &::before {
+    &::before { // https://dev.to/ekeijl/retro-crt-terminal-screen-in-css-js-4afh
         @include flickerPseudo;
         background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
         background-size: 100% 3px, 3px 100%;

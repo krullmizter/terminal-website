@@ -1,5 +1,5 @@
 .text {
-    animation: textFlicker 10s infinite;
+    animation: textFlicker 10s linear infinite, glitch 20s linear infinite;
 }
 
 .whiteLine {
@@ -11,6 +11,35 @@
     animation: whiteLine linear 5s infinite;
 }
 
+@keyframes glitch {
+    0% {
+        transform: skewX(0);
+    }
+
+    90% {
+        transform: skewX(0);
+    }
+
+    96% {
+        transform: skewX(2deg);
+    }
+
+    97% {
+        transform: skewX(-6deg);
+    }
+
+    98% {
+        transform: skewX(5deg);
+    }
+
+    99% {
+        transform: skewX(-9deg);
+    }
+
+    100% {
+        transform: skewX(0);
+    }
+}
 
 @keyframes whiteLine {
     0% {
@@ -28,23 +57,23 @@
 
 @keyframes textFlicker {
     0% {
-        text-shadow: none;
+        text-shadow: $text-shadow;
     }
 
     65% {
-        text-shadow: none;
+        text-shadow: $text-shadow;
     }
 
     96% {
-        text-shadow: 1.5px 1px 1.5px $green-dark;
+        text-shadow: 1.75px -1.75px 1.5px $green-dark;
     }
 
     98% {
-        text-shadow: 1.75px 1.5px 1.5px $green-dark;
+        text-shadow: 2px -2px 1.5px $green-dark;
     }
 
     100% {
-        text-shadow: 1px 1.25px 1.5px $green-dark;
+        text-shadow: 2px -2.25px 1.5px $green-dark;
     }
 }
 

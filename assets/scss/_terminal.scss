@@ -70,7 +70,7 @@
     }
 }
 
-#input::after {
+#terminalOutput p:last-child::after {
     content: '|';
     animation: cursorBlinking .5s infinite;
 }

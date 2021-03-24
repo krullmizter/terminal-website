@@ -126,7 +126,7 @@ a {
   color: #00b347;
 }
 
-#input::after {
+#terminalOutput p:last-child::after {
   content: '|';
   -webkit-animation: cursorBlinking .5s infinite;
           animation: cursorBlinking .5s infinite;

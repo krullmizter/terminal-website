@@ -1,14 +1,16 @@
-var i = 0;
-var speed = 25;
-var text = 'Welcome to me, I\'m Samuel Granvik. I\'m a bachelor student of in information technology at Arcada University of Applied Sciences.';
+let i = 0;
+const speed = 25;
+const text = ['Hello my name is Samuel Granvik', 'I\'m a student at Arcada University of Applied Sciences', 'test'];
 
 window.onload = function autoType() {
 
-    if (i < text.length) {
-        document.getElementById('input').innerHTML += text.charAt(i);
-        i++;
-        setTimeout(autoType, speed);
-    }
-    
-}
+    for (i; i < text.length; i++) {
+        let paragraph = document.createElement('p');
+        let sentence  = document.createTextNode(text[i]);
+        paragraph.appendChild(sentence);
 
+        document.getElementById('terminalOutput').appendChild(paragraph);
+
+        setTimeout(autoType, speed);
+    }  
+}
